@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	tests	# do not perform "make test"
+#
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	CGI
 %define		pnam	WeT
@@ -34,15 +38,18 @@ podstawiowych sk³adników:
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
 %{__make}
+
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
-
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 cp -a scripts themes $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 %clean
@@ -51,7 +58,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes README
-%{perl_sitelib}/CGI/WeT.pm
-%{perl_sitelib}/CGI/WeT
+%{perl_vendorlib}/CGI/WeT.pm
+%{perl_vendorlib}/CGI/WeT
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}

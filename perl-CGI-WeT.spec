@@ -3,7 +3,7 @@ Summary:	CGI-WeT perl module
 Summary(pl):	Modu³ perla CGI-WeT
 Name:		perl-CGI-WeT
 Version:	0.71
-Release:	3
+Release:	4
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl

@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	CGI
-%define	pnam	WeT
+%define		pdir	CGI
+%define		pnam	WeT
 Summary:	CGI::WeT Perl module - suite of modules to themeify a website
 Summary(pl):	Modu³ Perla CGI::WeT - pakiet modu³ów do nadania motywów stronom WWW
 Name:		perl-CGI-WeT

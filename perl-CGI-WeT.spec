@@ -1,12 +1,11 @@
+%include	/usr/lib/rpm/macros.perl
 %define	pdir	CGI
 %define	pnam	WeT
-%include	/usr/lib/rpm/macros.perl
 Summary:	CGI-WeT perl module
 Summary(pl):	Modu³ perla CGI-WeT
 Name:		perl-CGI-WeT
 Version:	0.71
-Release:	6
-
+Release:	7
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -24,7 +23,7 @@ CGI-WeT - zestaw modu³ów do budowania stron www z mo¿liwo¶ci± wyboru
 ich wygl±du.
 
 %prep
-%setup -q -n CGI-WeT-%{version}
+%setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
 perl Makefile.PL

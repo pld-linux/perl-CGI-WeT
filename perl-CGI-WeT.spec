@@ -3,13 +3,14 @@ Summary:	CGI-WeT perl module
 Summary(pl):	Modu³ perla CGI-WeT
 Name:		perl-CGI-WeT
 Version:	0.71
-Release:	2
+Release:	3
 License:	GPL
 Group:		Development/Languages/Perl
+Group(de):	Entwicklung/Sprachen/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/CGI/CGI-WeT-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
-BuildRequires:	perl >= 5.005_03-14
+BuildRequires:	perl >= 5.6
 BuildRequires:	perl-ldap
 BuildRequires:	mod_perl
 %requires_eq	perl
@@ -32,32 +33,21 @@ perl Makefile.PL
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-cp -a {scripts,themes} $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
+cp -a scripts themes $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
-(
-  cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/CGI/WeT
-  sed -e "s#$RPM_BUILD_ROOT##" .packlist >.packlist.new
-  mv -f .packlist.new .packlist
-)
-
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man3/* \
-        Changes README
+gzip -9nf Changes README
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {Changes,README}.gz
-
+%doc *.gz
 %{perl_sitelib}/CGI/WeT.pm
 %{perl_sitelib}/CGI/WeT
-%{perl_sitearch}/auto/CGI/WeT
-
 %{_mandir}/man3/*
-
-%{_prefix}/src/examples/%{name}
+%{_examplesdir}/%{name}

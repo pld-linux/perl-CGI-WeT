@@ -1,11 +1,26 @@
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	CGI
-%define	pnam	WeT
-Summary:	CGI::WeT perl module
-Summary(pl):	Modu³ perla CGI::WeT
+%define		pdir	CGI
+%define		pnam	WeT
+Summary:	CGI::WeT Perl module
+Summary(cs):	Modul CGI::WeT pro Perl
+Summary(da):	Perlmodul CGI::WeT
+Summary(de):	CGI::WeT Perl Modul
+Summary(es):	Módulo de Perl CGI::WeT
+Summary(fr):	Module Perl CGI::WeT
+Summary(it):	Modulo di Perl CGI::WeT
+Summary(ja):	CGI::WeT Perl ¥â¥¸¥å¡¼¥ë
+Summary(ko):	CGI::WeT ÆÞ ¸ðÁÙ
+Summary(no):	Perlmodul CGI::WeT
+Summary(pl):	Modu³ Perla CGI::WeT
+Summary(pt):	Módulo de Perl CGI::WeT
+Summary(pt_BR):	Módulo Perl CGI::WeT
+Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl CGI::WeT
+Summary(sv):	CGI::WeT Perlmodul
+Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl CGI::WeT
+Summary(zh_CN):	CGI::WeT Perl Ä£¿é
 Name:		perl-CGI-WeT
 Version:	0.71
-Release:	7
+Release:	8
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	ftp://ftp.cpan.org/pub/CPAN/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
@@ -37,14 +52,12 @@ install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 cp -a scripts themes $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
-gzip -9nf Changes README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc Changes README
 %{perl_sitelib}/CGI/WeT.pm
 %{perl_sitelib}/CGI/WeT
 %{_mandir}/man3/*

@@ -20,7 +20,7 @@ Summary(uk):	Модуль для Perl CGI::WeT
 Summary(zh_CN):	CGI::WeT Perl дё©И
 Name:		perl-CGI-WeT
 Version:	0.71
-Release:	8
+Release:	10
 License:	GPL
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz

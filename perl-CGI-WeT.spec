@@ -7,7 +7,7 @@ Release:	1
 License:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/CGI/CGI-WeT-%{version}.tar.gz
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/CGI/CGI-WeT-%{version}.tar.gz
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.005_03-14
 BuildRequires:	perl-ldap
@@ -20,7 +20,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 CGI-WeT - Suite of modules to themeify a website.
 
 %description -l pl
-CGI-WeT - zestaw modu³ów do budowania stron www z mo¿liwo¶ci± wyboru 
+CGI-WeT - zestaw modu³ów do budowania stron www z mo¿liwo¶ci± wyboru
 ich wygl±du.
 
 %prep
@@ -32,11 +32,11 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}
+install -d $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
 
 make install DESTDIR=$RPM_BUILD_ROOT
 
-cp -a {scripts,themes} $RPM_BUILD_ROOT/usr/src/examples/%{name}
+cp -a {scripts,themes} $RPM_BUILD_ROOT%{_prefix}/src/examples/%{name}
 
 (
   cd $RPM_BUILD_ROOT%{perl_sitearch}/auto/CGI/WeT
@@ -60,4 +60,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_mandir}/man3/*
 
-/usr/src/examples/%{name}
+%{_prefix}/src/examples/%{name}

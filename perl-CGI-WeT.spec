@@ -1,27 +1,12 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	CGI
 %define		pnam	WeT
-Summary:	CGI::WeT Perl module
-Summary(cs):	Modul CGI::WeT pro Perl
-Summary(da):	Perlmodul CGI::WeT
-Summary(de):	CGI::WeT Perl Modul
-Summary(es):	Módulo de Perl CGI::WeT
-Summary(fr):	Module Perl CGI::WeT
-Summary(it):	Modulo di Perl CGI::WeT
-Summary(ja):	CGI::WeT Perl ¥â¥¸¥å¡¼¥ë
-Summary(ko):	CGI::WeT ÆÞ ¸ðÁÙ
-Summary(nb):	Perlmodul CGI::WeT
-Summary(pl):	Modu³ Perla CGI::WeT
-Summary(pt):	Módulo de Perl CGI::WeT
-Summary(pt_BR):	Módulo Perl CGI::WeT
-Summary(ru):	íÏÄÕÌØ ÄÌÑ Perl CGI::WeT
-Summary(sv):	CGI::WeT Perlmodul
-Summary(uk):	íÏÄÕÌØ ÄÌÑ Perl CGI::WeT
-Summary(zh_CN):	CGI::WeT Perl Ä£¿é
+Summary:	CGI::WeT Perl module - suite of modules to themeify a website
+Summary(pl):	Modu³ Perla CGI::WeT - pakiet modu³ów do nadania motywów stronom WWW
 Name:		perl-CGI-WeT
 Version:	0.71
 Release:	10
-License:	GPL
+License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	78528519a7a96511b96064d9a4d750ce
@@ -32,11 +17,18 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-CGI::WeT - Suite of modules to themeify a website.
+The collection of CGI::WeT::* modules allows a site to be built from
+three major components:
+(1) static themed HTML files,
+(2) theme definitions,
+(3) CGI scripts.
 
 %description -l pl
-CGI::WeT - zestaw modu³ów do budowania stron www z mo¿liwo¶ci± wyboru
-ich wygl±du.
+Zestaw modu³ów CGI::WeT umo¿liwia zbudowanie stron www z trzech
+podstawiowych sk³adników:
+(1) statycznych plików HTML z motywami,
+(2) definicji motywów,
+(3) skryptów CGI.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}

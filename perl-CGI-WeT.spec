@@ -2,8 +2,8 @@
 Summary:	CGI-WeT perl module
 Summary(pl):	Modu³ perla CGI-WeT
 Name:		perl-CGI-WeT
-Version:	0.6.3
-Release:	3
+Version:	0.6.4
+Release:	1
 Copyright:	GPL
 Group:		Development/Languages/Perl
 Group(pl):	Programowanie/Jêzyki/Perl
@@ -30,6 +30,7 @@ make
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{version}
+
 make install DESTDIR=$RPM_BUILD_ROOT
 
 cp -a {scripts,themes} $RPM_BUILD_ROOT/usr/src/examples/%{name}-%{version}

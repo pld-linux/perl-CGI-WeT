@@ -3,7 +3,7 @@ Summary:	CGI-WeT perl module
 Summary(pl):	Modu³ perla CGI-WeT
 Name:		perl-CGI-WeT
 Version:	0.71
-Release:	4
+Release:	5
 License:	GPL
 Group:		Development/Languages/Perl
 Group(de):	Entwicklung/Sprachen/Perl
@@ -12,6 +12,7 @@ Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/CGI/CGI-WeT-%{version}.ta
 BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildRequires:	perl >= 5.6
 BuildRequires:	apache-mod_perl
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

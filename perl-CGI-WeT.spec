@@ -28,8 +28,8 @@ three major components:
 (3) CGI scripts.
 
 %description -l pl
-Zestaw modu³ów CGI::WeT umo¿liwia zbudowanie stron www z trzech
-podstawiowych sk³adników:
+Zestaw modu³ów CGI::WeT umo¿liwia zbudowanie stron WWW z trzech
+podstawowych sk³adników:
 (1) statycznych plików HTML z motywami,
 (2) definicji motywów,
 (3) skryptów CGI.

@@ -10,7 +10,7 @@ Summary(fr):	Module Perl CGI::WeT
 Summary(it):	Modulo di Perl CGI::WeT
 Summary(ja):	CGI::WeT Perl ¥â¥¸¥å¡¼¥ë
 Summary(ko):	CGI::WeT ÆÞ ¸ðÁÙ
-Summary(no):	Perlmodul CGI::WeT
+Summary(nb):	Perlmodul CGI::WeT
 Summary(pl):	Modu³ Perla CGI::WeT
 Summary(pt):	Módulo de Perl CGI::WeT
 Summary(pt_BR):	Módulo Perl CGI::WeT

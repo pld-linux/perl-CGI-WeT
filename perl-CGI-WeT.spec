@@ -1,8 +1,8 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	CGI
 %define	pnam	WeT
-Summary:	CGI-WeT perl module
-Summary(pl):	Modu³ perla CGI-WeT
+Summary:	CGI::WeT perl module
+Summary(pl):	Modu³ perla CGI::WeT
 Name:		perl-CGI-WeT
 Version:	0.71
 Release:	7
@@ -16,10 +16,10 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-CGI-WeT - Suite of modules to themeify a website.
+CGI::WeT - Suite of modules to themeify a website.
 
 %description -l pl
-CGI-WeT - zestaw modu³ów do budowania stron www z mo¿liwo¶ci± wyboru
+CGI::WeT - zestaw modu³ów do budowania stron www z mo¿liwo¶ci± wyboru
 ich wygl±du.
 
 %prep

@@ -6,7 +6,7 @@
 %define		pdir	CGI
 %define		pnam	WeT
 Summary:	CGI::WeT Perl module - suite of modules to themeify a website
-Summary(pl):	Modu≥ Perla CGI::WeT - pakiet modu≥Ûw do nadania motywÛw stronom WWW
+Summary(pl.UTF-8):   Modu≈Ç Perla CGI::WeT - pakiet modu≈Ç√≥w do nadania motyw√≥w stronom WWW
 Name:		perl-CGI-WeT
 Version:	0.71
 Release:	10
@@ -27,12 +27,12 @@ three major components:
 (2) theme definitions,
 (3) CGI scripts.
 
-%description -l pl
-Zestaw modu≥Ûw CGI::WeT umoøliwia zbudowanie stron WWW z trzech
-podstawowych sk≥adnikÛw:
-(1) statycznych plikÛw HTML z motywami,
-(2) definicji motywÛw,
-(3) skryptÛw CGI.
+%description -l pl.UTF-8
+Zestaw modu≈Ç√≥w CGI::WeT umo≈ºliwia zbudowanie stron WWW z trzech
+podstawowych sk≈Çadnik√≥w:
+(1) statycznych plik√≥w HTML z motywami,
+(2) definicji motyw√≥w,
+(3) skrypt√≥w CGI.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}

@@ -1,10 +1,10 @@
 #
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
-#
-%include	/usr/lib/rpm/macros.perl
+
 %define		pdir	CGI
 %define		pnam	WeT
+%include	/usr/lib/rpm/macros.perl
 Summary:	CGI::WeT Perl module - suite of modules to themeify a website
 Summary(pl.UTF-8):	Moduł Perla CGI::WeT - pakiet modułów do nadania motywów stronom WWW
 Name:		perl-CGI-WeT
@@ -14,9 +14,10 @@ License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	78528519a7a96511b96064d9a4d750ce
-BuildRequires:	rpm-perlprov >= 3.0.3-16
-BuildRequires:	perl-devel >= 1:5.8.0
+URL:		http://search.cpan.org/dist/CGI-WeT/
 BuildRequires:	apache-mod_perl
+BuildRequires:	perl-devel >= 1:5.8.0
+BuildRequires:	rpm-perlprov >= 3.0.3-16
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 

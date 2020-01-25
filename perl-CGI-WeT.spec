@@ -4,7 +4,6 @@
 
 %define		pdir	CGI
 %define		pnam	WeT
-%include	/usr/lib/rpm/macros.perl
 Summary:	CGI::WeT Perl module - suite of modules to themeify a website
 Summary(pl.UTF-8):	Moduł Perla CGI::WeT - pakiet modułów do nadania motywów stronom WWW
 Name:		perl-CGI-WeT
